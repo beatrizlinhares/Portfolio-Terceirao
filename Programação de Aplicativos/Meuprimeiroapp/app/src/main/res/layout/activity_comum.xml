@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/at"
+    tools:context=".Comum">
+
+    <EditText
+        android:id="@+id/HI"
+        android:layout_width="123dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="40dp"
+        android:background="#7372EC"
+        android:ems="10"
+        android:fontFamily="@font/amaranth"
+        android:hint="         Horas"
+        android:inputType="number"
+        android:onClick="HI"
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/HF"
+        app:layout_constraintEnd_toStartOf="@+id/MI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/MI"
+        android:layout_width="121dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="40dp"
+        android:background="#7372EC"
+        android:ems="10"
+        android:fontFamily="@font/amaranth"
+        android:hint="       Minutos"
+        android:inputType="number"
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/MF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintStart_toEndOf="@+id/HI"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/HF"
+        android:layout_width="124dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="5dp"
+        android:background="#7372EB"
+        android:ems="10"
+        android:fontFamily="@font/amaranth"
+        android:hint="         Horas"
+        android:inputType="number"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/MF"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HI" />
+
+    <EditText
+        android:id="@+id/MF"
+        android:layout_width="122dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="58dp"
+        android:background="#7372EB"
+        android:ems="10"
+        android:fontFamily="@font/amaranth"
+        android:hint="      Minutos"
+        android:inputType="number"
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/RM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/HF"
+        app:layout_constraintTop_toBottomOf="@+id/MI" />
+
+    <TextView
+        android:id="@+id/RH"
+        android:layout_width="72dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="26dp"
+        android:background="#DCF4FD"
+        app:layout_constraintEnd_toStartOf="@+id/RM"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HF" />
+
+    <TextView
+        android:id="@+id/RM"
+        android:layout_width="69dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="112dp"
+        android:background="#DBF3FC"
+        android:onClick="RM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintStart_toEndOf="@+id/RH"
+        app:layout_constraintTop_toBottomOf="@+id/MF" />
+
+    <Button
+        android:id="@+id/Bsoma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#A5A3FF"
+        android:onClick="Soma"
+        android:text="Soma"
+        android:textColor="#333265"
+        android:textColorHint="#673AB7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Bsub"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RH"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <Button
+        android:id="@+id/Bsub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="76dp"
+        android:backgroundTint="#A4A2FE"
+        android:onClick="Subtração"
+        android:text="Subtração"
+        android:textColor="#333265"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Bsoma"
+        app:layout_constraintTop_toBottomOf="@+id/RM"
+        app:layout_constraintVertical_bias="0.003" />
+</androidx.constraintlayout.widget.ConstraintLayout>
