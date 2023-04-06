@@ -1,3 +1,4 @@
 Meu primeiro app - Nessa atividade junto com o professor criamos nosso primeiro aplicativo no Android Studio, com a tela comum, onde fizemos a calculadora de horas, a tela admin, onde buscamos contas já criadas, e a tela de cadastro, onde cadastramos uma nova conta.
 Câmera - Nessa atividade criamos um aplicativo onde o usuário consegue tirar uma foto e adicionar como foto de perfil, também consegue pegar uma foto da galeria para adicionar como foto de perfil.
 Pager - Nessa atividade criamos fragmentos dentro de uma activity, relacionamos tabs e pagers.
+Jogo Random - Nessa atividade fizemos um jogo de adivinhação onde o programa gera um número e o usuário tenta acertar.
