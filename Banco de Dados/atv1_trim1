@@ -1,4 +1,4 @@
-Atividade "Segunda forma normal" (2fn)
+# Atividade "Segunda forma normal" (2fn)
 
 create table empregado (
   Nome VARCHAR (20) NOT NULL,
