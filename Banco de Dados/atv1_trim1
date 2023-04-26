@@ -1,0 +1,29 @@
+Atividade "Segunda forma normal" (2fn)
+
+create table empregado (
+  Nome VARCHAR (20) NOT NULL,
+  id_empregado serial,
+  horas_semanais time,
+  PRIMARY KEY (id_empregado)
+  )
+  
+  create table empresa (
+    rua_empresa VARCHAR (20),
+    numeroLocal_empresa VARCHAR (5),
+    bairro_empresa VARCHAR (10),
+    cidade_empresa VARCHAR (10),
+    pais_empresa VARCHAR (10),
+    horas_semanais time,
+    id_empresa SERIAL,
+    PRIMARY KEY (id_empresa)
+    )
+  
+  create table empregado_empresa (
+    id_empresa2 serial,
+    id_empregado2 serial,
+    FOREIGN KEY (id_empresa2)
+    References empresa (id_empresa),
+    FOREIGN key (id_empregado2)
+    REFERENCES empregado (id_empregado)
+    )
+  
