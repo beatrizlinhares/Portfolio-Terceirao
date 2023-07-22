@@ -1,0 +1,80 @@
+Atividade "Primeira forma normal" (1fn)
+
+
+
+
+- Código não colocado na 1fn
+
+create table Livros (
+  titulo VARCHAR (20), 
+  capítulo VARCHAR (10), --composto (nome ou número?)
+  paginas int,
+  autor VARCHAR (10),
+  genero VARCHAR (10), --multivalorado (mais de um genero)
+  isbn VARCHAR (25),
+  PRIMARY KEY (isbn)
+  )
+  
+  CREATE TABLE Clientes (
+    Nome VARCHAR (20) not NULL,
+    idade int,
+    CPF VARCHAR (20),
+    telefone VARCHAR (20), --multivalorado (vários telefones)
+    filiação VARCHAR (20), --composto (pai e mãe)
+    isbn_Livros VARCHAR (25),
+    PRIMARY KEY (CPF),
+    FOREIGN KEY (isbn_Livros)
+    REFERENCES livros (isbn)
+    )
+    
+    
+    
+    
+    
+    
+    - Código na 1fn
+    
+    create table LivrosCorreto (
+  titulo VARCHAR (20), 
+  NomeCapítulo VARCHAR (10),
+  NúmeroCapítulo int,
+  paginas int,
+  autor VARCHAR (10),
+  isbn VARCHAR (25),
+  PRIMARY KEY (isbn)
+  )
+  
+  CREATE table genero (
+    isbn_livroscorreto VARCHAR (25),
+    genero VARCHAR (10),
+    FOREIGN KEY (isbn_livroscorreto)
+    REFERENCES LivrosCorreto (isbn)
+    )
+  
+  CREATE TABLE ClientesCorreto (
+    Nome VARCHAR (20) not NULL,
+    idade int,
+    CPF VARCHAR (20),
+    telefoneFixo VARCHAR (20),
+    telefonecelular VARCHAR (20),
+    NomeMãe VARCHAR (20),
+    NomePai VARCHAR (20),
+    isbn_Livros VARCHAR (25),
+    PRIMARY KEY (CPF),
+    FOREIGN KEY (isbn_Livros)
+    REFERENCES livros (isbn)
+    )
+    
+    CREATE table TelefoneFixo (
+      CPF_ClientesCorreto VARCHAR (20),
+      telefones VARCHAR (15),
+      FOREIGN KEY (CPF_ClientesCorreto)
+      REFERENCES ClientesCorreto (CPF)
+      )
+      
+      CREATE TABLE TelefoneCelular (
+        CPF_ClientesCorreto VARCHAR (20),
+        telefones VARCHAR (15),
+        FOREIGN KEY (CPF_ClientesCorreto)
+        REFERENCES ClientesCorreto (CPF)
+        )
